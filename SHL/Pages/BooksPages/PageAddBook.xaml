@@ -1,0 +1,124 @@
+﻿<Page x:Class="SHL.PageAddBook"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SHL"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAddBook">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+
+        <ScrollViewer Grid.Row="0"
+                      Grid.Column="0"
+                      Grid.RowSpan="4"
+                      Grid.ColumnSpan="2" Margin="0,2.4,0,-1.8">
+
+            <StackPanel Name="LabelsAddingBook"
+                        Margin="5">
+
+                <Label Content="Informacje o książce"
+                       FontSize="20"/>
+
+
+                <Label Content="Tytuł"/>
+                <TextBox Name="Title"/>
+
+                <Label Content="Podtytuł"/>
+                <TextBox Name="Subtitle"/>
+
+                <Label Content="ISBN"/>
+                <TextBox Name="ISBN"/>
+
+                <Label Content="Ilość stron"/>
+                <TextBox Name="Pages"/>
+
+                <Label Content="Kod EAN"/>
+                <TextBox Name="Ean"/>
+
+                <Label Content="Gatunek"/>
+                <TextBox Name="Type"/>
+
+                <!-- ******************************
+                       List with languages
+                     ****************************** -->
+
+                <Label Content="Język oryginału"/>
+                <ComboBox Name="OriginalLanguage">
+                    <ComboBoxItem Name="Language"
+                                  Content="Wybierz język"
+                                  IsSelected="True"
+                                  Visibility="Collapsed"/>
+                    <ComboBoxItem Name="OriginalLanguage_PL"
+                                  Content="Polski"/>
+                    <ComboBoxItem Name="OriginalLanguage_EN"
+                                  Content="Angielski"/>
+                    <ComboBoxItem Name="OriginalLanguage_DE"
+                                  Content="Niemiecki"/>
+                    <ComboBoxItem Name="OriginalLanguage_LT"
+                                  Content="Litewski"/>
+                    <ComboBoxItem Name="OriginalLanguage_RU"
+                                  Content="Rosyjski"/>
+                    <ComboBoxItem Name="OriginalLanguage_ES"
+                                  Content="Hiszpański"/>
+                </ComboBox>
+
+                <Label Content="Tytuł oryginalny"/>
+                <TextBox Name="OriginalTitle"/>
+
+                <Label Content="Podtytuł oryginalny"/>
+                <TextBox Name="OriginalSubtitle"/>
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="0"
+                      Grid.Column="2"
+                      Grid.RowSpan="4"
+                      Grid.ColumnSpan="2">
+
+            <StackPanel Margin="5">
+
+                <Label Content="Informacje o autorach"
+                       FontSize="20"/>
+
+                <Label Content="Imię autora"/>
+                <TextBox Name="AuthorsName" />
+
+                <Label Content="Nazwisko autora"/>
+                <TextBox Name="AuthorsSurname"/>
+
+                <Label Content="Imię tłumacza"/>
+                <TextBox Name="TranslatorsName" />
+
+                <Label Content="Nazwisko tłumacza"/>
+                <TextBox Name="TranslatorsSurname"/>
+
+                <Label Content=""/>
+
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+</Page>

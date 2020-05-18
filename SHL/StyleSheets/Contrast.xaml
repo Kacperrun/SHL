@@ -1,0 +1,49 @@
+﻿<!-- Style Sheet for contrast mode of Application -->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SHL" >
+
+    <!-- Wystylizuj Menu -->
+
+    <!-- *************************************** -->
+    <!-- ********** Zmień kolorystykę ********** -->
+    <!-- *************************************** -->
+
+    <Style TargetType="Menu" x:Key="MenuContrastMode">
+        <Setter Property="Background" Value="#acacac"/>
+    </Style>
+
+    <Style TargetType="MenuItem" x:Key="MenuItemContrastMode">
+        <Setter Property="Background" Value="#acacac"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonContrastMode">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Background" Value="#11015e" />
+        <Setter Property="Foreground" Value="#bcbcbc"/>
+    </Style>
+
+    <Style TargetType="Grid" x:Key="GridContrastMode">
+        <Setter Property="Background" Value="#363636" />
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="TextBoxContrastMode">
+        <Setter Property="Background" Value="#b3b3b3"/>
+        <Setter Property="Cursor" Value="IBeam" />
+    </Style>
+
+    <Style TargetType="PasswordBox" x:Key="PasswordBoxContrastMode">
+        <Setter Property="Background" Value="#b3b3b3"/>
+        <Setter Property="Cursor" Value="IBeam" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="LabelContrastMode">
+        <Setter Property="Foreground" Value="#bcbcbc"/>
+    </Style>
+
+    <Style TargetType="Page" x:Key="PageContrastMode">
+    </Style>
+</ResourceDictionary>

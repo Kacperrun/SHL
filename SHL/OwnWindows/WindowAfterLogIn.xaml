@@ -1,0 +1,173 @@
+﻿<Window x:Class="SHL.WindowAfterLogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SHL"
+        mc:Ignorable="d"
+        Title="SHL - Mała Domowa Biblioteka" 
+        Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <Menu Grid.Row="0" 
+              Name="MainMenu"
+              Style="{DynamicResource MenuDarkMode}">
+
+            <MenuItem Header="Plik"
+                      Name="MainMenu_Plik">
+                <MenuItem Header="Ekran startowy" 
+                          Name="MainMenu_Plik_EkranStartowy"
+                          Click="MainMenu_Plik_EkranStartowy_Click"/>
+                <MenuItem Header="Styl ekranu"
+                          Name="MainMenu_Plik_StylEkranu">
+                    <MenuItem Header="Jasny" 
+                              Name="MainMenu_Plik_StylEkranu_Jasny"
+                              IsChecked="True" 
+                              IsCheckable="True"
+                              Click="MainMenu_Plik_StylEkranu_Jasny_Click"/>
+                    <MenuItem Header="Ciemny" 
+                              Name="MainMenu_Plik_StylEkranu_Ciemny"
+                              IsCheckable="True"
+                              Click="MainMenu_Plik_StylEkranu_Ciemny_Click"/>
+                    <MenuItem Header="Kontrastowy" 
+                              Name="MainMenu_Plik_StylEkranu_Kontrastowy"
+                              IsCheckable="True"
+                              Click="MainMenu_Plik_StylEkranu_Kontrastowy_Click"/>
+                </MenuItem>
+
+                <Separator />
+
+                <MenuItem Header="Wyloguj" 
+                          Name="MainMenu_Plik_Wyloguj"
+                          Click="MainMenu_Plik_Wyloguj_Click"/>
+                <MenuItem Header="Zamknij" 
+                          Name="MainMenu_Plik_Zamknij"
+                          Click="MainMenu_Plik_Zamknij_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Pozycje"
+                      Name="MainMenu_Pozycje">
+                <MenuItem Header="Książki"
+                          Name="MainMenu_Pozycje_Ksiazki">
+                    <MenuItem Header="Dodaj"
+                              Name="MainMenu_Pozycje_Ksiazki_Dodaj"
+                              Click="MainMenu_Pozycje_Ksiazki_Dodaj_Click"/>
+                    <MenuItem Header="Usuń"
+                              Name="MainMenu_Pozycje_Ksiazki_Usun"
+                              Click="MainMenu_Pozycje_Ksiazki_Usun_Click"/>
+                    <MenuItem Header="Wyszukaj"
+                              Name="MainMenu_Pozycje_Ksiazki_Wyszukaj">
+                        <MenuItem Header="Po ID"
+                                  Name="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoID"
+                                  Click="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoID_Click"/>
+                        <MenuItem Header="Po autorze"
+                                  Name="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoAutorze"
+                                  Click="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoAutorze_Click"/>
+                        <MenuItem Header="Po tytule"
+                                  Name="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoTytule"
+                                  Click="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoTytule_Click"/>
+                        <MenuItem Header="Po gatunku"
+                                  Name="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoGatunku"
+                                  Click="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoGatunku_Click"/>
+                        <MenuItem Header="Po lokalizacji"
+                                  Name="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoLokalizacji"
+                                  Click="MainMenu_Pozycje_Ksiazki_Wyszukaj_PoLokalizacji_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Wyświetl wszystkie"
+                              Name="MainMenu_Pozycje_Ksiazki_WyswietlWszystkie"
+                              Click="MainMenu_Pozycje_Ksiazki_WyswietlWszystkie_Click"/>
+                </MenuItem>
+                <MenuItem Header="Audiobooki"
+                          Name="MainMenu_Pozycje_Audiobooki">
+                    <MenuItem Header="Dodaj"
+                              Name="MainMenu_Pozycje_Audiobooki_Dodaj"
+                              Click="MainMenu_Pozycje_Audiobooki_Dodaj_Click"/>
+                    <MenuItem Header="Usuń"
+                              Name="MainMenu_Pozycje_Audiobooki_Usun"
+                              Click="MainMenu_Pozycje_Audiobooki_Usun_Click"/>
+                    <MenuItem Header="Wyszukaj"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj">
+                        <MenuItem Header="Po ID"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoID"
+                                  Click="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoID_Click"/>
+                        <MenuItem Header="Po autorze"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoAutorze"
+                                  Click="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoAutorze_Click"/>
+                        <MenuItem Header="Po tytule"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoTytule"
+                                  Click="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoTytule_Click"/>
+                        <MenuItem Header="Po gatunku"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoGatunku"
+                                  Click="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoGatunku_Click"/>
+                        <MenuItem Header="Po lokalizacji"
+                              Name="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoLokalizacji"
+                                  Click="MainMenu_Pozycje_Audiobooki_Wyszukaj_PoLokalizacji_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Wyświetl wszystkie"
+                              Name="MainMenu_Pozycje_Audiobooki_WyswietlWszystkie"
+                              Click="MainMenu_Pozycje_Audiobooki_WyswietlWszystkie_Click"/>
+
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Użytkownicy"
+                      Name="MainMenu_Uzytkownicy">
+                <MenuItem Header="Dodaj nowego użytkownika"
+                      Name="MainMenu_Uzytkownicy_Dodaj"
+                          Click="MainMenu_Uzytkownicy_Dodaj_Click"/>
+                <MenuItem Header="Usuń użytkownika"
+                      Name="MainMenu_Uzytkownicy_Usun"
+                          Click="MainMenu_Uzytkownicy_Usun_Click"/>
+                <MenuItem Header="Aktualizuj użytkownika"
+                      Name="MainMenu_Uzytkownicy_Aktualizuj"
+                          Click="MainMenu_Uzytkownicy_Aktualizuj_Click"/>
+                <MenuItem Header="Zmień uprawnienia użytkowników"
+                      Name="MainMenu_Uzytkownicy_ZmienUprawnienia"
+                          Click="MainMenu_Uzytkownicy_ZmienUprawnienia_Click"/>
+                <MenuItem Header="Wyszukaj użytkownika"
+                      Name="MainMenu_Uzytkownicy_Wyszukaj">
+                    <MenuItem Header="Po ID"
+                      Name="MainMenu_Uzytkownicy_Wyszukaj_PoID"
+                              Click="MainMenu_Uzytkownicy_Wyszukaj_PoID_Click"/>
+                    <MenuItem Header="Po nazwisku"
+                      Name="MainMenu_Uzytkownicy_Wyszukaj_PoNazwisku"
+                              Click="MainMenu_Uzytkownicy_Wyszukaj_PoNazwisku_Click"/>
+                    <MenuItem Header="Po loginie"
+                      Name="MainMenu_Uzytkownicy_Wyszukaj_PoLoginie"
+                              Click="MainMenu_Uzytkownicy_Wyszukaj_PoLoginie_Click"/>
+                </MenuItem>
+                <MenuItem Header="Wyświetl wszystkich użytkowników"
+                      Name="MainMenu_Uzytkownicy_WyswietlWszyskich"
+                          Click="MainMenu_Uzytkownicy_WyswietlWszyskich_Click"/>
+                <MenuItem Header="Wyloguj"
+                      Name="MainMenu_Uzytkownicy_Wyloguj"
+                          Click="MainMenu_Uzytkownicy_Wyloguj_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Klienci"
+                      Name="MainMenu_Klienci">
+                <MenuItem Header="Dodaj"
+                      Name="MainMenu_Klienci_Dodaj"
+                          Click="MainMenu_Klienci_Dodaj_Click"/>
+
+            </MenuItem>
+
+        </Menu>
+
+        <Frame Grid.Row="1"
+               Name="PageContent"/>
+
+
+    </Grid>
+</Window>
